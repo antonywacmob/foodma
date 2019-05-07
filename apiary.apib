@@ -90,3 +90,21 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
             "data":"1234"
         
         }
+        
+## Edit Password [/change_password]
+
+### Create Password and Change Password [POST]
+
++ Request (application/json)
+
+        {
+            "current_password": "password",
+            "new_password": "password"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Password changed successfully"
+        }
