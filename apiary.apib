@@ -3,78 +3,90 @@ HOST: http://polls.apiblueprint.org/
 
 # Foodma
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
 
-## Questions Collection [/questions]
+## Token Refresh [/token_refresh]
 
-### List All Questions [GET]
-
-+ Response 200 (application/json)
-
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+### Token Refresh [POST]
 
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "token": "elxkjkjskjzvkjhkjkjjhckjhkjkzjhkjbkjbkjszcv"
         }
+        
++ Response 200 (application/json)
 
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+        {
+            "status": "success",
+            "message": "token successfully refreshed",
+            "data": {
+                        "token": "fbdbedzsdzdgnsdgnsdfgsrtjn"
             }
+        
+        }
+        
+## Login [/login]
+
+### Login [POST]
+
++ Request (application/json)
+
+        {
+            "email": "xxx@yyy.com",
+            "password": "password"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "user successfully logged in",
+            "data": {
+                        "token": "elxkjkjskjzvkjhkjkjjhckjhkjkzjhkjbkjbkjszcv"
+            }
+        
+        }
+        
+        
+## Register [/register]
+
+### Register [POST]
+
++ Request (application/json)
+
+        {
+            "name": "abcd",
+            "email": "abcd@efg.com",
+            "password": "password",
+            "phone": "9037324059",
+            "gender": "Male"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "account successfully created",
+        
+        }
+        
+        
+## Forgot Password [/reset_password]
+
+### Register [POST]
+
++ Request (application/json)
+
+        {
+            "phone": "9037324058",
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "OTP sent to phone",
+            "data":"1234"
+        
+        }
