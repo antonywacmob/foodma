@@ -67,19 +67,19 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
 
         {
             "status": "success",
-            "message": "account successfully created",
+            "message": "account successfully created"
         
         }
         
         
 ## Forgot Password [/reset_password]
 
-### Register [POST]
+### Forgot Password [POST]
 
 + Request (application/json)
 
         {
-            "phone": "9037324058",
+            "phone": "9037324058"
         }
         
 + Response 200 (application/json)
@@ -107,4 +107,548 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
         {
             "status": "success",
             "message": "Password changed successfully"
+        }
+        
+## Configuration [/configuration]
+
+### Configuration [GET]
+
++ Request (application/json)
+
+        {
+            "platform": "Android"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Password changed successfully"
+            "data":{
+                        "update_version":"1.0.1",
+                        "force_update": true
+                    }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+## Home Page [/home_page]
+
+### Home Page [GET]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Successfully listed"
+            "data":{
+                        
+                    }
+        }
+        
+        
+## Product Listing [/products]
+
+### Product Listing [GET]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "category_id":1, 
+            "type_id":1, 
+            "filter":"", 
+            "sort":"", 
+            "search":""
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Listed successfully"
+            "data":{
+                     "common_product_list":["","","","",""], 
+                     "type of list":1, 
+                     "offset":10, 
+                     "limit":10   
+                    }
+        }
+        
+        
+## Search [/search]
+
+### Search [GET]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "word":"abc"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Listed successfully"
+            "data":[{
+                     "common_product_list":["","","","",""], 
+                     "type of list":1, 
+                     "offset":10, 
+                     "limit":10   
+                    },
+                    {
+                     "common_product_list":["","","","",""], 
+                     "type of list":1, 
+                     "offset":10, 
+                     "limit":10   
+                    },
+                    {
+                     "common_product_list":["","","","",""], 
+                     "type of list":1, 
+                     "offset":10, 
+                     "limit":10   
+                    },
+                    {
+                     "common_product_list":["","","","",""], 
+                     "type of list":1, 
+                     "offset":10, 
+                     "limit":10   
+                    }
+                    ]
+        }
+        
+        
+## Product Details [/product_details]
+
+### Product Details [GET]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "product_id":1
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Listed successfully"
+            "data":{
+                     
+                        
+                    }
+        }
+        
+        
+## Add to wishlist [/add_wishlist]
+
+### Add to wishlist [POST]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "product_id":1
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Added successfully"
+        }
+        
+        
+## Add to cart [/add_cart]
+
+### Add to cart [POST]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "product_id":1,
+            "quantity":20
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Added successfully"
+        }
+        
+        
+## View cart [/cart]
+
+### View cart [GET]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Listed successfully",
+            "data":[{},{},{},{}]
+        }
+        
+        
+## Change Quantity [/change_quantity]
+
+### Change Quantity [POST]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "product_id":1,
+            "quantity":20
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Quantity changed successfully"
+        }
+        
+        
+## Move to wishlist [/move_wishlist]
+
+### Move to wishlist [POST]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "product_id":1
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Moved to wishlist successfully"
+        }
+        
+## Remove from cart [/remove_cart]
+
+### Remove from cart [POST]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "product_id":1
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Removed from cart successfully"
+        }
+        
+        
+## Checkout [/checkout]
+
+### Checkout [POST]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "checkout successfully"
+        }
+        
+        
+## Address Listing [/address_list]
+
+### Address Listing [GET]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Listed successfully",
+            "data":[]
+        }
+        
+        
+## Edit Address [/edit_address]
+
+### Edit Address [POST]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "address_id":1,
+            "address":""
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Address edited successfully"
+        }
+        
+        
+## Add New Address [/add_address]
+
+### Add New Address [POST]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "address":""
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Address added successfully"
+        }
+        
+        
+## Remove Address [/remove_address]
+
+### Remove Address [POST]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "address_id":1
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Address removed successfully"
+        }
+        
+        
+## Payment [/payment]
+
+### Payment [POST]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Payment done successfully"
+        }
+        
+        
+## Apply Coupon [/apply_coupon]
+
+### Apply Coupon [POST]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "coupon_code":"XC234F"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Coupon applied successfully"
+        }
+        
+        
+## View Profile [/profile]
+
+### Profile [GET]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer caksjcahksjascdasca"
+        }
+
++ Response 200 (application/json)
+
+        {
+          "status":"success",
+          "message":"successfully listed",
+          "data":{
+                "name":"Sithara Krishnakumar",
+                "image_url":"https://i.ibb.co/kmrbPJp/22687832-1426096807440196-4276502542564884957-n.jpg",
+                "email":"sithara@gmail.com",
+                "phone": "9037324058"
+                }
+        }
+        
+        
+## Edit Profile [/edit_profile]
+
+### Edit Profile [POST]
+
++ Request (application/json)
+
+        {
+            "name": "abcd",
+            "email": "abcd@efg.com",
+            "password": "password",
+            "phone": "9037324059",
+            "gender": "Male"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "profile updated successfully"
+        }
+        
+        
+## Wishlist [/wishlist]
+
+### Wishlist [GET]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer caksjcahksjascdasca"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "wishlist listed successfully",
+            "data": [{},{},{},{}]
+        }
+        
+        
+## Orders [/orders]
+
+### Orders [GET]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer caksjcahksjascdasca"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "orders listed successfully",
+            "data": [{},{},{},{}]
         }
