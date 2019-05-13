@@ -368,8 +368,24 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
                                             "short_description":"Continental, Pan - Asian",
                                             "discount":"35% Off | Coupon Foodma50",
                                             "price":"100"
-                                        }]
-                    }
+                                        }],
+                    "reviews":{
+                                "star_rating":"4.5",
+                                "ratings_count":"2500",
+                                "review_items":[
+                                            {"id":1,"title":"Jacob Joseph","start_rating":"4","description":"Very good product. Nice quality"},
+                                            {"id":2,"title":"Jacob Joseph","start_rating":"4","description":"Very good product. Nice quality"},
+                                            {"id":3,"title":"Jacob Joseph","start_rating":"4","description":"Very good product. Nice quality"},
+                                            {"id":4,"title":"Jacob Joseph","start_rating":"4","description":"Very good product. Nice quality"},
+                                            {"id":5,"title":"Jacob Joseph","start_rating":"4","description":"Very good product. Nice quality"},
+                                            {"id":6,"title":"Jacob Joseph","start_rating":"4","description":"Very good product. Nice quality"},
+                                            {"id":7,"title":"Jacob Joseph","start_rating":"4","description":"Very good product. Nice quality"},
+                                            {"id":8,"title":"Jacob Joseph","start_rating":"4","description":"Very good product. Nice quality"},
+                                            {"id":9,"title":"Jacob Joseph","start_rating":"4","description":"Very good product. Nice quality"},
+                                            {"id":10,"title":"Jacob Joseph","start_rating":"4","description":"Very good product. Nice quality"}
+                                        ]
+                                }
+                            }       
         }
         
         
@@ -731,6 +747,25 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
         
         
 ## Orders [/orders]
+
+### Orders [GET]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer caksjcahksjascdasca"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "orders listed successfully",
+            "data": [{},{},{},{}]
+        }
+        
+        
+## Reviews [/reviews]
 
 ### Orders [GET]
 
