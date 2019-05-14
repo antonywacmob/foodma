@@ -218,6 +218,39 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
         }
         
         
+        
+## Category Listing [/categories]
+
+### Category Listing [GET]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+       
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Listed successfully",
+            "data":[
+                     {"id":1,"name":"","sub_categories":[{"id":1,"name":"","category_items":[{"id":1,"name":""}]},
+                                                {"id":2,"name":"","category_items":[{"id":1,"name":""}]},
+                                                {"id":3,"name":"","category_items":[{"id":1,"name":""}]},
+                                                {"id":4,"name":"","category_items":[{"id":1,"name":""}]},
+                                                {"id":5,"name":"","category_items":[{"id":1,"name":""}]},
+                                                {"id":6,"name":"","category_items":[{"id":1,"name":""}]},
+                                                {"id":7,"name":"","category_items":[{"id":1,"name":""}]},
+                                                {"id":8,"name":"","category_items":[{"id":1,"name":""}]}]},
+                     {"id":2,"name":"","sub_categories":[]},
+                     {"id":3,"name":"","sub_categories":[]},
+                     {"id":4,"name":"","sub_categories":[]},
+                     {"id":5,"name":"","sub_categories":[]},
+                     {"id":6,"name":"","sub_categories":[]}
+                    ]
+        } 
+        
 ## Product Listing [/products]
 
 ### Product Listing [GET]
