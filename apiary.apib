@@ -470,7 +470,7 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
 + Request (application/json)
 
         {
-            "word":"abc"
+            "key":"abc"
         }
         
 + Response 200 (application/json)
@@ -478,30 +478,50 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
         {
             "status": "success",
             "message": "Listed successfully"
-            "data":[{
-                     "common_product_list":["","","","",""], 
-                     "type of list":1, 
-                     "offset":10, 
-                     "limit":10   
-                    },
-                    {
-                     "common_product_list":["","","","",""], 
-                     "type of list":1, 
-                     "offset":10, 
-                     "limit":10   
-                    },
-                    {
-                     "common_product_list":["","","","",""], 
-                     "type of list":1, 
-                     "offset":10, 
-                     "limit":10   
-                    },
-                    {
-                     "common_product_list":["","","","",""], 
-                     "type of list":1, 
-                     "offset":10, 
-                     "limit":10   
-                    }
+            "data":[                    {
+                                            "id":1,
+                                            "category_id":1
+                                            "product_title":"Product 1"
+
+                                        },
+                                        {
+                                            "id":2,
+                                            "category_id":2
+                                            "product_title":"Product 2"
+                                            
+                                        },
+                                        {   
+                                            "id":3,
+                                            "category_id":3
+                                            "product_title":"Product 3"
+                                        },
+                                        {
+                                            "id":4,
+                                            "category_id":4
+                                            "product_title":"Product 4"
+                                        },
+                                        {
+                                            "id":5,
+                                            "category_id":5
+                                            "product_title":"Product 5"
+                     
+                                        },
+                                        {
+                                            "id":6,
+                                            "category_id":6
+                                            "product_title":"Product 6"
+                                            
+                                        },
+                                        {   
+                                            "id":7,
+                                            "category_id":7
+                                            "product_title":"Product 7"
+                                        },
+                                        {
+                                            "id":8,
+                                            "category_id":8
+                                            "product_title":"Product 8"
+                                        }
                     ]
         }
         
