@@ -311,7 +311,38 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
                                                 {"id":47,"name":"Sub Category 7","category_items":[{"id":47,"name":"Category Item 1"}]},
                                                 {"id":48,"name":"Sub Category 8","category_items":[{"id":48,"name":"Category Item 1"}]}]}
                     ]
-        } 
+        }
+        
+        
+## Filter [/filter/{category_id}]
+
+### Filter [GET]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "status": "success",
+            "message": "Listed successfully",
+            "data": {
+                        "min_price":50,
+                        "max_price":5000,
+                        "categories":[{"id":1,"name":"Category 1","sub_categories":[{"id":1,"name":"Sub Category 1"},
+                                                                                {"id":2,"name":"Sub Category 2"},
+                                                                                {"id":3,"name":"Sub Category 3"},
+                                                                                {"id":4,"name":"Sub Category 4"},
+                                                                                {"id":5,"name":"Sub Category 5"},
+                                                                                {"id":6,"name":"Sub Category 6"},
+                                                                                {"id":7,"name":"Sub Category 7"},
+                                                                                {"id":8,"name":"Sub Category 8"}]}
+                                    ]}
+            
+            }
         
 ## Product Listing [/products]
 
