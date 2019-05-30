@@ -624,7 +624,7 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
         }
         
         
-## Add to wishlist [/add_wishlist]
+## Add to wishlist [/add_wishlist/{product_id}]
 
 ### Add to wishlist [POST]
 
@@ -634,17 +634,29 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
             "Authorization":"Bearer dasljhvlaskvaf"
         }
         
-+ Request (application/json)
++ Response 200 (application/json)
 
         {
-            "product_id":1
+            "status": "success",
+            "message": "Added successfully"
+        }
+        
+        
+## Remove from wishlist [/remove_wishlist/{product_id}]
+
+### Remove from wishlist [POST]
+
++ Header (application/json)
+
+        {
+            "Authorization":"Bearer dasljhvlaskvaf"
         }
         
 + Response 200 (application/json)
 
         {
             "status": "success",
-            "message": "Added successfully"
+            "message": "Removed successfully"
         }
         
         
