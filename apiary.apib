@@ -360,7 +360,7 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
             
             }
         
-## Product Listing [/products/{page_number}/{count}]
+## Product Listing [/products]
 
 ### Product Listing [POST]
 
@@ -377,7 +377,9 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
             "type_id":1, 
             "filter":"", 
             "sort":0, 
-            "search":""
+            "search":"",
+            "page_number":1,
+            "page_count":20
         }
         
 + Response 200 (application/json)
@@ -624,7 +626,7 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
         }
         
         
-## Add to wishlist [/add_wishlist/{product_id}]
+## Add to wishlist [/add_wishlist]
 
 ### Add to wishlist [POST]
 
@@ -632,6 +634,12 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
 
         {
             "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "product_id":1
         }
         
 + Response 200 (application/json)
@@ -642,7 +650,7 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
         }
         
         
-## Remove from wishlist [/remove_wishlist/{product_id}]
+## Remove from wishlist [/remove_wishlist]
 
 ### Remove from wishlist [POST]
 
@@ -650,6 +658,12 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
 
         {
             "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "product_id":1
         }
         
 + Response 200 (application/json)
@@ -785,7 +799,7 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
             "message": "Moved to wishlist successfully"
         }
         
-## Remove from cart [/remove_cart/{product_id}]
+## Remove from cart [/remove_cart]
 
 ### Remove from cart [POST]
 
@@ -793,6 +807,12 @@ API for foodma App. Base URL : https://private-4b16e-foodma.apiary-mock.com/
 
         {
             "Authorization":"Bearer dasljhvlaskvaf"
+        }
+        
++ Request (application/json)
+
+        {
+            "product_id":1
         }
         
 + Response 200 (application/json)
